@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'crimson': ['Crimson Text', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +55,13 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				heritage: {
+					maroon: 'hsl(var(--heritage-maroon))',
+					gold: 'hsl(var(--heritage-gold))',
+					beige: 'hsl(var(--heritage-beige))',
+					cream: 'hsl(var(--heritage-cream))',
+					brown: 'hsl(var(--heritage-brown))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
