@@ -1,25 +1,41 @@
 import { HeroCTA } from "@/components/HeroCTA";
 import { HeritageCard } from "@/components/HeritageCard";
+import { CulturalHeritageCard } from "@/components/CulturalHeritageCard";
+import { HeritageOverview } from "@/components/HeritageOverview";
 import { Timeline } from "@/components/Timeline";
 import { HeritageWalk } from "@/components/HeritageWalk";
 import { Facebook, Instagram, Twitter } from "lucide-react";
 
-// Import images
-import heroImage from "@/assets/shaniwar-wada-hero.jpg";
-import agaKhanImage from "@/assets/aga-khan-palace.jpg";
+// Import real images for authentic representation
+import heroImage from "@/assets/real-shaniwar-wada.jpg";
+import agaKhanImage from "@/assets/real-aga-khan-palace.jpg";
+import pataleshwarImage from "@/assets/real-pataleshwar-caves.jpg";
+import lalMahalImage from "@/assets/real-lal-mahal.jpg";
+
+// Cultural heritage images
+import misalPavImage from "@/assets/pune-misal-pav.jpg";
+import ganeshFestivalImage from "@/assets/pune-ganesh-festival.jpg";
+import lavaniImage from "@/assets/pune-lavani-dance.jpg";
+
+// Generate additional authentic heritage site images
 import parvatiImage from "@/assets/parvati-hill.jpg";
-import pataleshwarImage from "@/assets/pataleshwar-caves.jpg";
 import vishramBaugImage from "@/assets/vishrambaug-wada.jpg";
 import sinhagadImage from "@/assets/sinhagad-fort.jpg";
-import dagdushethImage from "@/assets/dagdusheth-temple.jpg";
 
 const heritageSites = [
   {
     title: "Shaniwar Wada",
-    description: "The magnificent palace complex built by Baji Rao I in 1732, once the seat of the Peshwa rulers. Though partially in ruins, its grandeur still speaks of the Maratha Empire's golden era.",
+    description: "The magnificent palace complex built by Baji Rao I in 1732, once the seat of the Peshwa rulers. Though partially in ruins after the 1828 fire, its grandeur still speaks of the Maratha Empire's golden era.",
     period: "1732 AD",
     image: heroImage,
-    significance: "Political center of the Maratha Empire and architectural marvel of 18th century India"
+    significance: "Political and administrative center of the Maratha Empire, showcasing Indo-Islamic architecture"
+  },
+  {
+    title: "Lal Mahal",
+    description: "The childhood residence of Chhatrapati Shivaji Maharaj, where the great Maratha king spent his formative years. This red palace symbolizes the birth of the Maratha nation.",
+    period: "1630 AD",
+    image: lalMahalImage,
+    significance: "Birthplace of Maratha nationalism and Shivaji's early education center"
   },
   {
     title: "Aga Khan Palace",
@@ -58,19 +74,50 @@ const heritageSites = [
   }
 ];
 
+const culturalHeritage = [
+  {
+    title: "Ganesh Festival",
+    description: "Pune's most celebrated festival, started by Lokmanya Tilak in 1893 to unite people during British rule. The city comes alive with elaborate decorations, cultural programs, and community celebrations.",
+    category: "Festival",
+    image: ganeshFestivalImage,
+    significance: "Symbol of cultural unity and resistance against colonial rule",
+    experience: "Visit during August-September to witness grand processions and community pandals"
+  },
+  {
+    title: "Misal Pav",
+    description: "Pune's signature dish that represents the city's culinary heritage. This spicy curry made with sprouts, topped with farsan and served with pav, reflects the robust flavors of Maharashtrian cuisine.",
+    category: "Cuisine",
+    image: misalPavImage,
+    significance: "Represents the working-class culture and nutritious street food tradition",
+    experience: "Try at famous joints like Bedekar Tea Stall or Katakirr Misal for authentic taste"
+  },
+  {
+    title: "Lavani Dance",
+    description: "Traditional Maharashtrian folk dance that combines powerful rhythm, quick tempo, and expressive storytelling. Performed in nauvari sarees, it showcases the strength and grace of Marathi culture.",
+    category: "Performing Arts",
+    image: lavaniImage,
+    significance: "Preserves oral traditions and celebrates feminine strength in Marathi culture",
+    experience: "Watch performances at cultural centers or during traditional festivals"
+  }
+];
+
 const Index = () => {
   const scrollToSites = () => {
     document.getElementById('heritage-sites')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToCultural = () => {
+    document.getElementById('cultural-heritage')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with authentic Shaniwar Wada image */}
       <section 
         className="min-h-screen flex items-center justify-center relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `linear-gradient(rgba(90, 24, 24, 0.4), rgba(90, 24, 24, 0.4)), url(${heroImage})` }}
       >
-        <div className="absolute inset-0 bg-heritage-maroon/40"></div>
+        <div className="absolute inset-0"></div>
         <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-playfair font-bold mb-6 leading-tight">
             Timeless Pune
@@ -79,8 +126,8 @@ const Index = () => {
             A Journey Through Its Heritage
           </p>
           <p className="text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed opacity-80">
-            Discover the architectural marvels, historical significance, and cultural depth 
-            of Pune's magnificent heritage sites that tell the story of the Maratha Empire
+            Discover the architectural marvels, cultural traditions, culinary delights, and living heritage 
+            that tell the complete story of Pune's magnificent past and vibrant present
           </p>
           <HeroCTA onExplore={scrollToSites} />
         </div>
@@ -94,32 +141,59 @@ const Index = () => {
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8">
             Pune, once the seat of the mighty Maratha Empire, stands as a testament to India's rich 
-            architectural and cultural heritage. From the grandeur of Shaniwar Wada to the spiritual 
-            sanctity of ancient cave temples, every stone tells a story of valor, devotion, and artistic excellence.
+            heritage that extends far beyond its monuments. From the grandeur of royal palaces to the 
+            vibrancy of street festivals, from ancient spiritual practices to modern cultural expressions, 
+            every aspect of life here tells a story of continuity and evolution.
           </p>
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             This historic city, where Peshwa rulers held court and freedom fighters made their stand, 
-            invites you to walk through centuries of history and experience the timeless beauty of its monuments.
+            where Lokmanya Tilak started public Ganesh celebrations and where traditional flavors still 
+            define street corners, invites you to experience a living heritage that thrives in both 
+            preservation and adaptation.
           </p>
         </div>
       </section>
 
-      {/* Heritage Sites Section */}
+      {/* Heritage Overview Section */}
+      <HeritageOverview />
+
+      {/* Historic Sites Section */}
       <section id="heritage-sites" className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-heritage-maroon mb-4">
-              Iconic Heritage Sites
+              Historic Monuments
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Explore the architectural marvels that have stood the test of time, 
-              each narrating a unique chapter of Pune's glorious past
+              each narrating a unique chapter of Pune's political and spiritual history
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {heritageSites.map((site, index) => (
               <HeritageCard key={index} {...site} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Cultural Heritage Section */}
+      <section id="cultural-heritage" className="py-20 bg-heritage-cream">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-playfair font-bold text-heritage-maroon mb-4">
+              Living Cultural Heritage
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Experience the traditions, festivals, and cultural expressions that make Pune's heritage 
+              a living, breathing part of daily life
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {culturalHeritage.map((item, index) => (
+              <CulturalHeritageCard key={index} {...item} />
             ))}
           </div>
         </div>
@@ -139,24 +213,24 @@ const Index = () => {
               "A city's soul is told through its heritage"
             </h3>
             <p className="text-xl mb-8 opacity-90">
-              Preserving the past, inspiring the future
+              Heritage is not just about the past—it's about how we carry our culture forward
             </p>
             
             <div className="flex justify-center gap-6 mb-8">
-              <a href="#" className="text-heritage-gold hover:text-white transition-colors duration-300">
+              <a href="#" className="text-heritage-gold hover:text-white transition-colors duration-300" aria-label="Follow us on Facebook">
                 <Facebook className="w-8 h-8" />
               </a>
-              <a href="#" className="text-heritage-gold hover:text-white transition-colors duration-300">
+              <a href="#" className="text-heritage-gold hover:text-white transition-colors duration-300" aria-label="Follow us on Instagram">
                 <Instagram className="w-8 h-8" />
               </a>
-              <a href="#" className="text-heritage-gold hover:text-white transition-colors duration-300">
+              <a href="#" className="text-heritage-gold hover:text-white transition-colors duration-300" aria-label="Follow us on Twitter">
                 <Twitter className="w-8 h-8" />
               </a>
             </div>
             
             <div className="border-t border-heritage-gold/30 pt-8 text-sm opacity-75">
-              <p>&copy; 2024 Timeless Pune - A Heritage Journey. Created with passion for preserving history.</p>
-              <p className="mt-2">All heritage sites are protected monuments. Please visit responsibly.</p>
+              <p>&copy; 2024 Timeless Pune - A Complete Heritage Journey. Celebrating monuments, culture, traditions & people.</p>
+              <p className="mt-2">Experience Pune's living heritage responsibly. Support local artisans, try authentic cuisine, participate in cultural festivals.</p>
             </div>
           </div>
         </div>
