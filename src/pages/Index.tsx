@@ -1,5 +1,4 @@
 import { HeroCTA } from "@/components/HeroCTA";
-import { Facebook, Instagram, Twitter } from "lucide-react";
 
 // Import real image for hero section
 import heroImage from "@/assets/real-shaniwar-wada.jpg";
@@ -61,23 +60,6 @@ const Index = () => {
             <p className="text-xl mb-8 opacity-90">
               Heritage is not just about the past—it's about how we carry our culture forward
             </p>
-            
-            <div className="flex justify-center gap-6 mb-8">
-              <a href="#" className="text-heritage-gold hover:text-white transition-colors duration-300" aria-label="Follow us on Facebook">
-                <Facebook className="w-8 h-8" />
-              </a>
-              <a href="#" className="text-heritage-gold hover:text-white transition-colors duration-300" aria-label="Follow us on Instagram">
-                <Instagram className="w-8 h-8" />
-              </a>
-              <a href="#" className="text-heritage-gold hover:text-white transition-colors duration-300" aria-label="Follow us on Twitter">
-                <Twitter className="w-8 h-8" />
-              </a>
-            </div>
-            
-            <div className="border-t border-heritage-gold/30 pt-8 text-sm opacity-75">
-              <p>&copy; 2024 Timeless Pune - A Complete Heritage Journey. Celebrating monuments, culture, traditions & people.</p>
-              <p className="mt-2">Experience Pune's living heritage responsibly. Support local artisans, try authentic cuisine, participate in cultural festivals.</p>
-            </div>
           </div>
         </div>
       </footer>
