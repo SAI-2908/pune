@@ -8,56 +8,56 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Maharashtrian Heritage Color Palette */
-    --background: 42 35% 96%;
-    --foreground: 15 20% 10%;
+    /* Warm, Earthy Maharashtrian Palette - Emotionally Connecting */
+    --background: 45 25% 97%;
+    --foreground: 25 20% 15%;
 
-    --card: 42 30% 94%;
-    --card-foreground: 15 20% 10%;
+    --card: 45 20% 95%;
+    --card-foreground: 25 20% 15%;
 
-    --popover: 42 30% 94%;
-    --popover-foreground: 15 20% 10%;
+    --popover: 45 20% 95%;
+    --popover-foreground: 25 20% 15%;
 
-    /* Saffron/Bhagwa Primary */
-    --primary: 24 100% 50%;
-    --primary-foreground: 42 35% 96%;
+    /* Warm Terracotta Primary - Like ancient Maharashtra architecture */
+    --primary: 15 45% 55%;
+    --primary-foreground: 45 25% 97%;
 
-    /* Deep Maroon Secondary */
-    --secondary: 0 60% 30%;
-    --secondary-foreground: 42 35% 96%;
+    /* Soft Marigold Secondary - Traditional flower colors */
+    --secondary: 40 50% 70%;
+    --secondary-foreground: 25 25% 20%;
 
-    /* Warm Cream Muted */
-    --muted: 42 25% 88%;
-    --muted-foreground: 15 20% 40%;
+    /* Warm Sandstone Muted */
+    --muted: 45 15% 88%;
+    --muted-foreground: 25 15% 50%;
 
-    /* Heritage Gold Accent */
-    --accent: 45 90% 55%;
-    --accent-foreground: 15 20% 10%;
+    /* Rich Golden Accent - Temple jewelry inspired */
+    --accent: 42 60% 65%;
+    --accent-foreground: 25 25% 20%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 45 25% 97%;
 
-    --border: 42 20% 85%;
-    --input: 42 25% 90%;
-    --ring: 24 100% 50%;
+    --border: 45 12% 82%;
+    --input: 45 15% 90%;
+    --ring: 15 45% 55%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
     
-    /* Heritage-specific colors */
-    --heritage-maroon: 0 60% 30%;
-    --heritage-gold: 45 90% 55%;
-    --heritage-saffron: 24 100% 50%;
-    --heritage-beige: 42 30% 88%;
-    --heritage-cream: 42 35% 94%;
-    --heritage-brown: 15 30% 25%;
+    /* Heritage-specific warm colors */
+    --heritage-terracotta: 15 45% 55%;
+    --heritage-marigold: 40 50% 70%;
+    --heritage-sandstone: 45 20% 85%;
+    --heritage-cream: 45 25% 94%;
+    --heritage-earth: 25 35% 35%;
+    --heritage-gold: 42 60% 65%;
     
-    /* Gradients */
-    --gradient-heritage: linear-gradient(135deg, hsl(var(--heritage-saffron)), hsl(var(--heritage-gold)));
-    --gradient-warm: linear-gradient(180deg, hsl(var(--heritage-cream)), hsl(var(--heritage-beige)));
+    /* Warm gradients */
+    --gradient-heritage: linear-gradient(135deg, hsl(var(--heritage-terracotta)), hsl(var(--heritage-marigold)));
+    --gradient-warm: linear-gradient(180deg, hsl(var(--heritage-cream)), hsl(var(--heritage-sandstone)));
     
-    /* Shadows */
-    --shadow-heritage: 0 8px 32px hsl(var(--heritage-maroon) / 0.2);
-    --shadow-glow: 0 0 30px hsl(var(--heritage-gold) / 0.4);
+    /* Soft shadows */
+    --shadow-heritage: 0 4px 20px hsl(var(--heritage-terracotta) / 0.12);
+    --shadow-glow: 0 0 25px hsl(var(--heritage-marigold) / 0.25);
 
     --sidebar-background: 0 0% 98%;
 
@@ -77,41 +77,41 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 15 15% 8%;
-    --foreground: 42 25% 95%;
+    --background: 25 15% 8%;
+    --foreground: 45 20% 90%;
 
-    --card: 15 15% 10%;
-    --card-foreground: 42 25% 95%;
+    --card: 25 15% 10%;
+    --card-foreground: 45 20% 90%;
 
-    --popover: 15 15% 10%;
-    --popover-foreground: 42 25% 95%;
+    --popover: 25 15% 10%;
+    --popover-foreground: 45 20% 90%;
 
-    --primary: 45 65% 45%;
-    --primary-foreground: 15 15% 8%;
+    --primary: 40 35% 45%;
+    --primary-foreground: 25 15% 8%;
 
-    --secondary: 15 20% 20%;
-    --secondary-foreground: 42 25% 95%;
+    --secondary: 25 20% 18%;
+    --secondary-foreground: 45 20% 90%;
 
-    --muted: 15 15% 15%;
-    --muted-foreground: 42 15% 65%;
+    --muted: 25 12% 15%;
+    --muted-foreground: 45 15% 65%;
 
-    --accent: 45 55% 35%;
-    --accent-foreground: 42 25% 95%;
+    --accent: 42 40% 45%;
+    --accent-foreground: 45 20% 90%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 50% 40%;
+    --destructive-foreground: 45 20% 90%;
 
-    --border: 15 15% 20%;
-    --input: 15 15% 15%;
-    --ring: 45 65% 45%;
+    --border: 25 12% 20%;
+    --input: 25 12% 15%;
+    --ring: 40 35% 45%;
     
-    --heritage-maroon: 0 40% 20%;
-    --heritage-gold: 45 70% 45%;
-    --heritage-saffron: 24 80% 40%;
-    --heritage-beige: 15 15% 18%;
-    --heritage-cream: 15 15% 15%;
-    --heritage-brown: 42 25% 75%;
-    
+    --heritage-terracotta: 15 30% 40%;
+    --heritage-marigold: 40 35% 50%;
+    --heritage-sandstone: 25 15% 18%;
+    --heritage-cream: 25 15% 12%;
+    --heritage-earth: 45 20% 75%;
+    --heritage-gold: 42 40% 45%;
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -151,23 +151,23 @@ All colors MUST be HSL.
     box-shadow: var(--shadow-glow);
   }
   
-  .text-heritage-maroon {
-    color: hsl(var(--heritage-maroon));
+  .text-heritage-terracotta {
+    color: hsl(var(--heritage-terracotta));
+  }
+  
+  .text-heritage-marigold {
+    color: hsl(var(--heritage-marigold));
   }
   
   .text-heritage-gold {
     color: hsl(var(--heritage-gold));
   }
   
-  .text-heritage-saffron {
-    color: hsl(var(--heritage-saffron));
-  }
-  
   .bg-heritage-cream {
     background-color: hsl(var(--heritage-cream));
   }
   
-  .bg-heritage-saffron {
-    background-color: hsl(var(--heritage-saffron));
+  .bg-heritage-sandstone {
+    background-color: hsl(var(--heritage-sandstone));
   }
 }
