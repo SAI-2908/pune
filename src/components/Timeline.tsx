@@ -1,36 +1,37 @@
-import timelineBg from "@/assets/timeline-bg.jpg";
-import heritageSunset from "@/assets/heritage-sunset.jpg";
+import shaniwadaTimeline from "@/assets/shaniwar-wada-timeline.jpg";
+import pataleshwarTimeline from "@/assets/pataleshwar-timeline.jpg";
+import agaKhanTimeline from "@/assets/aga-khan-timeline.jpg";
 
 const timelineEvents = [
   {
     year: "1595",
     title: "Foundation of Pune",
     description: "Pune was founded by Maloji Bhosale, grandfather of Shivaji Maharaj",
-    image: heritageSunset
+    image: shaniwadaTimeline
   },
   {
     year: "1732",
     title: "Shaniwar Wada Built",
     description: "Baji Rao I builds the magnificent Shaniwar Wada palace complex",
-    image: timelineBg
+    image: shaniwadaTimeline
   },
   {
     year: "1818",
     title: "British Rule Begins", 
     description: "Pune comes under British administration after the Third Anglo-Maratha War",
-    image: heritageSunset
+    image: pataleshwarTimeline
   },
   {
     year: "1942",
     title: "Gandhi's Arrest",
     description: "Mahatma Gandhi and Kasturba Gandhi arrested at Aga Khan Palace",
-    image: timelineBg
+    image: agaKhanTimeline
   },
   {
     year: "1960",
     title: "Modern Pune",
     description: "Pune becomes part of Maharashtra state and begins industrial growth",
-    image: heritageSunset
+    image: shaniwadaTimeline
   }
 ];
 

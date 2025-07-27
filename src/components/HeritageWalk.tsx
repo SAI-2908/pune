@@ -1,7 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Clock, MapPin, Camera } from "lucide-react";
-import walkPath from "@/assets/walk-path.jpg";
-import heritageSunset from "@/assets/heritage-sunset.jpg";
+import heritageWalkPath from "@/assets/heritage-walk-path.jpg";
+import shaniwadaTimeline from "@/assets/shaniwar-wada-timeline.jpg";
+import pataleshwarTimeline from "@/assets/pataleshwar-timeline.jpg";
+import agaKhanTimeline from "@/assets/aga-khan-timeline.jpg";
 
 const walkItinerary = [
   {
@@ -10,7 +12,7 @@ const walkItinerary = [
     duration: "1.5 hours",
     description: "Start your heritage walk at the iconic Shaniwar Wada palace ruins",
     tips: "Best photography in morning light",
-    image: walkPath
+    image: shaniwadaTimeline
   },
   {
     time: "11:00 AM", 
@@ -18,7 +20,7 @@ const walkItinerary = [
     duration: "45 minutes",
     description: "Explore the ancient rock-cut cave temple dating back to 8th century",
     tips: "Cool and peaceful atmosphere",
-    image: heritageSunset
+    image: pataleshwarTimeline
   },
   {
     time: "12:30 PM",
@@ -26,7 +28,7 @@ const walkItinerary = [
     duration: "1 hour",
     description: "Climb to the hilltop temple for panoramic city views",
     tips: "Wear comfortable shoes for the climb",
-    image: walkPath
+    image: heritageWalkPath
   },
   {
     time: "2:30 PM",
@@ -34,7 +36,7 @@ const walkItinerary = [
     duration: "1 hour", 
     description: "Traditional Maharashtrian cuisine at a heritage restaurant",
     tips: "Try the authentic Pune specialties",
-    image: heritageSunset
+    image: heritageWalkPath
   },
   {
     time: "4:00 PM",
@@ -42,7 +44,7 @@ const walkItinerary = [
     duration: "1 hour",
     description: "Visit the palace where Gandhi ji was imprisoned",
     tips: "Rich history and beautiful gardens",
-    image: walkPath
+    image: agaKhanTimeline
   },
   {
     time: "5:30 PM",
@@ -50,7 +52,7 @@ const walkItinerary = [
     duration: "30 minutes",
     description: "End your walk at the famous Ganpati temple",
     tips: "Experience evening aarti if possible",
-    image: heritageSunset
+    image: heritageWalkPath
   }
 ];
 
